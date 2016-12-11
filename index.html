@@ -15,7 +15,41 @@
 
 </head>
 <body>
-  
+  <main>
+  <br>
+  <img src="diaeresis-logo.png">
+  <h1>Diæresis.js</h1>
+  <p>
+    <em>A lightweight javascript library that lets you weild diæreses like <strike>Chuck</strike> Mary Norris.</em>
+  </p>
+
+  <article id="diaeresis" contenteditable>
+    Diaeresis: the preeminent JavaScript library for diacritical correctness.
+  </article>
+  <hr>
+  <input type="checkbox" id="diaeresis-toggle" onclick="toggleDiaeresis()" checked>
+  <label for="diaeresis-toggle" id="diaeresis-label-toggle">Toggle Diaeresis.js</label>
+</main>
+<script src="diaeresis.js" async></script>
+
+<script async>
+  var toggle = document.getElementById("diaeresis-toggle");
+
+  function toggleDiaeresis() {
+    if (toggle.checked) {
+      var d = new Diaeresis({});
+      // document.getElementById("diaeresis-label-toggle").innerHTML = "diaeresis: on";
+    } else {
+      dDiaeresis();
+      // document.getElementById("diaeresis-label-toggle").innerHTML = "diaeresis: off";
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function(event) {
+    toggle.checked = true;
+    toggleDiaeresis()
+  });
+</script>
 
 </body>
 </html>
