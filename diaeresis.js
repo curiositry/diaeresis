@@ -100,7 +100,7 @@
 
     for (var item in config.dictionary) {
       if (config.dictionary.hasOwnProperty(item)) {
-        var textNodes = textNodesUnder(element);
+        var textNodes = getTextNodes(element);
         for (var i = 0; i < textNodes.length; i++) {
           var node = textNodes[i];
           var text = node.textContent;
