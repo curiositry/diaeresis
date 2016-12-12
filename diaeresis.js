@@ -92,7 +92,7 @@
     }
   }
 
-  this.dDiaeresis = function () {
+  this.resetDiaereses = function () {
     var element = document.getElementById(config["selector"]);
     if (element == null) {
       console.log("Could not unrun Diaeresis on #"+config.selector+". Are you sure #"+config.selector+" is a valid id?");
