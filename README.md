@@ -9,7 +9,7 @@ Diaeresis.js
 
 All you need to do is include the script in your page and initialize it (in this example, using the RawGit CDN so you don’t even have to download it):
 
-```language-html
+```html
 <script src="https://cdn.rawgit.com/curiositry/diaeresis/master/diaeresis.min.js"></script>
 
 <script>
@@ -19,7 +19,7 @@ All you need to do is include the script in your page and initialize it (in this
 
 By default, it will run on the contents of `#diaeresis`, and use the small built-in dictionary. But you can change all that when you initialize it:
 
-```language-javascript
+```javascript
 var d = new Diaeresis({
   selector: "myCustomId",
   dictionary: {
@@ -33,7 +33,7 @@ In the above example, diaeresis will run on the element with the ID #myCustomId,
 
 You’ll probably want to run Diaeresis asynchronously, like this:
 
-```
+```html
 <script src="diaeresis.min.js" defer></script>
 <script>
   document.addEventListener("DOMContentLoaded", function(event) {
