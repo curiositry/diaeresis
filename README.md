@@ -41,3 +41,30 @@ You’ll probably want to run Diaeresis asynchronously, like this:
   }
 </script>
 ```
+
+### Going wild
+
+While the small, built-in dictionary only adds diaereses, the script itself is much more flexible. Here a few examples of other uses you could put it to:
+
+* Converting "dumb" quotes to “smart” quotes, fake (--) em-dashes to real em-dases (—), and other ersatz punctuation marks to their respective Unicode characters.
+
+* Adding other diacritical marks — such as acute (`´ `) and grave (`` ` ``) accents — to words that ought to have them but rarely do, such as “élite” and “résumé”.
+
+* Converting ASCII smiley faces to Unicode emoticons, and other symbols to their official Unicode character.
+
+* Adding fancy ligatures (diaeresis &rarr; diæresis, for example).
+
+You can use diaeresis.js for any of the above just by adding custom rules to the “dictionary”:
+
+```javascript
+var d = new Diaeresis({
+  dictionary: {
+    "--": "—",
+    "elite": " élite",
+    "<3": "❤",
+    "diaeres": "diæres"
+  }
+});
+```
+
+(And Diaeresis supports regular expressions, if you want to get fancy.)
