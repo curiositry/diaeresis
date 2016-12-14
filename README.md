@@ -37,7 +37,7 @@ You’ll probably want to run Diaeresis asynchronously, like this:
 <script src="diaeresis.min.js" defer></script>
 <script>
   document.addEventListener("DOMContentLoaded", function(event) {
-    var d = newDiaeresis();
+    var d = new Diaeresis();
   }
 </script>
 ```
